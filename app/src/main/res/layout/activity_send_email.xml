@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_send_email"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+
+    tools:context="party.moha.www.hahaexpressmail.SendEmailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="收件人："/>
+                <EditText
+                    android:id="@+id/send_email_receiver"
+                    android:layout_weight="15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40px"
+                    android:hint="多地址用空格分开"/>
+            </LinearLayout>
+
+            <View
+                android:layout_height="1px"
+                android:background="#ebebeb"
+                android:layout_width="fill_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="抄    送："/>
+                <EditText
+                    android:id="@+id/send_email_cc"
+                    android:layout_weight="15"
+                    android:textSize="40px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="多地址用空格分开"/>
+            </LinearLayout>
+
+            <View
+                android:layout_height="1px"
+                android:background="#ebebeb"
+                android:layout_width="fill_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="密    送："/>
+                <EditText
+                    android:id="@+id/send_email_bcc"
+                    android:layout_weight="15"
+                    android:layout_width="wrap_content"
+                    android:textSize="40px"
+                    android:layout_height="wrap_content"
+                    android:hint="多地址用空格分开"/>
+            </LinearLayout>
+
+            <View
+                android:layout_height="1px"
+                android:background="#ebebeb"
+                android:layout_width="fill_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="发信人："/>
+                <Spinner
+                    android:id="@+id/send_email_sender"
+                    android:layout_weight="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Spinner>
+            </LinearLayout>
+
+            <View
+                android:layout_height="1px"
+                android:background="#ebebeb"
+                android:layout_width="fill_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="主    题："/>
+                <EditText
+                    android:id="@+id/send_email_subject"
+                    android:layout_weight="15"
+                    android:textSize="40px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint=" "/>
+            </LinearLayout>
+
+            <View
+                android:layout_height="1px"
+                android:background="#ebebeb"
+                android:layout_width="fill_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="内    容："/>
+                <EditText
+                    android:id="@+id/send_email_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="8"
+                    android:gravity="top"
+                    android:textSize="40px"
+                    android:scrollbars="vertical"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <View
+                android:layout_height="1px"
+                android:background="#ebebeb"
+                android:layout_width="fill_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="附    件："/>
+
+                <Button
+                    android:id="@+id/send_email_add_extern"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@mipmap/plus" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/send_email_extern_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+
+            <View
+                android:layout_height="1px"
+                android:background="#ebebeb"
+                android:layout_width="fill_parent" />
+
+            <LinearLayout
+                android:paddingTop="10px"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/send_email_send_button"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:textColor="#ffffff"
+                    android:background="#83cbff"
+
+                    android:text="发送"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
